@@ -1,0 +1,5 @@
+{
+    "env": {
+      "DB_URL": "@mongodb+srv://demoadmin:demoadmin@democluster-k12ir.mongodb.net/test?retryWrites=true&w=majority"
+    }
+  }
