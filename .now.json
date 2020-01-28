@@ -1,5 +1,5 @@
 {
   "env": {
-    "database_name": "this is database name"
+    "DATABASE_NAME": "this is database name"
   }
 }
