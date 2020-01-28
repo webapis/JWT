@@ -4,7 +4,7 @@ const MongoClient = require('mongodb').MongoClient;
 
 // const url =
 //   'mongodb+srv://demoadmin:demoadmin@democluster-k12ir.mongodb.net/test?retryWrites=true&w=majority';
-const url = process.env;
+const url = process.env.DATABASE_NAME;
 export default async function getDb({ url }) {
   try {
     return await MongoClient.connect(url);
