@@ -1,6 +1,6 @@
 {
   "env": {
-    "DATABASE_NAME": "@DATABASE_NAME",
-    "MY_NAME":"My name is serdar"
+    "DATABASE_NAME": "@database_name",
+    "YOUR_VALUE": "@your_value"
   }
 }
