@@ -1,6 +1,5 @@
 {
   "env": {
-    "DATABASE_NAME": "@database_name",
-    "YOUR_VALUE": "@your_value"
+    "DATABASE_URL": "@database_url"
   }
 }

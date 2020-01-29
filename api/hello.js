@@ -1,6 +1,13 @@
+import getDbClient from './getDb';
 module.exports = (req, res) => {
   const { name = 'World' } = req.query;
-  const url = process.env;
+  try {
+    const client = getDbClient();
+    console.log('client', client);
+  } catch (error) {
+    console.log('client error', error);
+  }
+
   console.log('__process.env.DATABASE_NAME', process.env.YOUR_VALUE);
   res.status(200).send(`Hello ${name}!`);
 };
