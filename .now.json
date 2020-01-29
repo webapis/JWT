@@ -2,6 +2,6 @@
   "env": {
     "DATABASE_URL": "@database_url",
     "COLL_NAME":"users",
-    "MYY_VARIABLE": "@acme-api-key"
+    "MY_SEC_VAR": "@secret_key"
   }
 }

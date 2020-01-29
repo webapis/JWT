@@ -8,8 +8,7 @@ module.exports = (req, res) => {
   //   console.log('client error', error);
   // }
 
-  console.log('__process.env.DB_NAME', process.env.DB_NAME);
-  console.log('COLL_NAME', process.env.COLL_NAME);
-  console.log('MYY_VARIABLE', process.env.MYY_VARIABLE);
+  console.log('MY_SEC_VAR', process.env.MY_SEC_VAR);
+
   res.status(200).send(`Hello ${name}!`);
 };
