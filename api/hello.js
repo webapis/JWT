@@ -8,7 +8,7 @@ module.exports = (req, res) => {
   //   console.log('client error', error);
   // }
 
-  console.log('MY_SEC_VAR', process.env.MY_SEC_VAR);
+  console.log('DATABASE_URL', process.env.DATABASE_URL);
 
   res.status(200).send(`Hello ${name}!`);
 };
