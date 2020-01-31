@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-filename-extension */
 import React, { useEffect, useState } from 'react';
-import useFetch from './hooks/useFetch';
+import useFetch from './fetch/useFetch';
 import './App.css';
 
 function App() {

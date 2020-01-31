@@ -13,7 +13,7 @@ export default function useFetch() {
       setFetchError(err);
     }
   }
-  async function post({ url, init }) {
+  async function postAsJson({ url, init }) {
     try {
       const resp = await fetch(url, init);
       setResult(await resp.json());
@@ -22,5 +22,5 @@ export default function useFetch() {
     }
   }
 
-  return { getAsJson, post, result, fetchError };
+  return { getAsJson, postAsJson, result, fetchError };
 }
