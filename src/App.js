@@ -1,24 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
+/* eslint-disable react/jsx-filename-extension */
+import React, { useEffect, useState } from 'react';
+import useFetch from './hooks/useFetch';
 import './App.css';
 
 function App() {
+  const { result, getAsJson, fetchError } = useFetch();
+  const [users, setUsers] = useState([]);
+  useEffect(() => {
+    if (result) {
+      setUsers(result);
+
+      debugger;
+    }
+  }, [result]);
+  useEffect(() => {
+    if (fetchError) {
+      debugger;
+    }
+  }, [fetchError]);
+
+  useEffect(() => {
+    if (users.length > 0) {
+      debugger;
+    }
+  }, [users]);
+  function getJson() {
+    getAsJson({ url: 'http://dummy.restapiexample.com/api/v1/employees' });
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      App
+      <button type="button" onClick={getJson}>
+        Get
+      </button>
     </div>
   );
 }
